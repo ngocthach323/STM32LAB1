@@ -1,0 +1,7 @@
+excercise2.c:9:6:LED_RED_ON	8	static
+excercise2.c:13:6:LED_YELLOW_ON	8	static
+excercise2.c:17:6:LED_GREEN_ON	8	static
+excercise2.c:21:6:LED_RED_OFF	8	static
+excercise2.c:25:6:LED_YELLOW_OFF	8	static
+excercise2.c:29:6:LED_GREEN_OFF	8	static
+excercise2.c:33:6:run_excercise2	8	static
