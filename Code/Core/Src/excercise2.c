@@ -31,18 +31,14 @@ void LED_GREEN_OFF() {
 }
 
 void run_excercise2() {
-	LED_RED_OFF();
-	LED_YELLOW_OFF();
-	LED_GREEN_OFF();
-
 	LED_RED_ON();
 	LED_YELLOW_OFF();
 	LED_GREEN_OFF();
 	HAL_Delay(5000);
 
 	LED_RED_OFF();
-	LED_YELLOW_ON();
 	LED_GREEN_OFF();
+	LED_YELLOW_ON();
 	HAL_Delay(2000);
 
 	LED_RED_OFF();
