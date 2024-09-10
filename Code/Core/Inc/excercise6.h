@@ -10,6 +10,5 @@
 #include "main.h"
 
 void displayClock(int num);
-void clearClock();
 
 #endif /* INC_EXCERCISE6_H_ */
