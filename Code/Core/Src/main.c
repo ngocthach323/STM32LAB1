@@ -95,7 +95,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  run_excercise(&state, &count);
+	  run_excercise5(&state, &count);
 	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }

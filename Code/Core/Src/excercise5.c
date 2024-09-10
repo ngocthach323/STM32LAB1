@@ -103,7 +103,7 @@ void green_light() {
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_SET);
 }
 
-void run_excercise(int *state, int *count) {
+void run_excercise5(int *state, int *count) {
 	switch (*state) {
 		case 0:
 		  	display7SEG(4 - *count);

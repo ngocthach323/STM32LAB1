@@ -39,9 +39,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   00004c95  00000000  00000000  0003a115  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00079856  00000000  00000000  0003edaa  2**0
+ 18 .debug_str    00079857  00000000  00000000  0003edaa  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000b8600  2**0
+ 19 .comment      00000053  00000000  00000000  000b8601  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00000dd8  00000000  00000000  000b8654  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -508,9 +508,9 @@ void green_light() {
  80004b6:	bd80      	pop	{r7, pc}
  80004b8:	40010c00 	.word	0x40010c00
 
-080004bc <run_excercise>:
+080004bc <run_excercise5>:
 
-void run_excercise(int *state, int *count) {
+void run_excercise5(int *state, int *count) {
  80004bc:	b580      	push	{r7, lr}
  80004be:	b082      	sub	sp, #8
  80004c0:	af00      	add	r7, sp, #0
@@ -520,20 +520,20 @@ void run_excercise(int *state, int *count) {
  80004c6:	687b      	ldr	r3, [r7, #4]
  80004c8:	681b      	ldr	r3, [r3, #0]
  80004ca:	2b02      	cmp	r3, #2
- 80004cc:	d038      	beq.n	8000540 <run_excercise+0x84>
+ 80004cc:	d038      	beq.n	8000540 <run_excercise5+0x84>
  80004ce:	2b02      	cmp	r3, #2
- 80004d0:	dc4f      	bgt.n	8000572 <run_excercise+0xb6>
+ 80004d0:	dc4f      	bgt.n	8000572 <run_excercise5+0xb6>
  80004d2:	2b00      	cmp	r3, #0
- 80004d4:	d002      	beq.n	80004dc <run_excercise+0x20>
+ 80004d4:	d002      	beq.n	80004dc <run_excercise5+0x20>
  80004d6:	2b01      	cmp	r3, #1
- 80004d8:	d019      	beq.n	800050e <run_excercise+0x52>
+ 80004d8:	d019      	beq.n	800050e <run_excercise5+0x52>
 		  		*count = 0;
 		  		*state = 0;
 		  	}
 		  	break;
 		default:
 		  	break;
- 80004da:	e04a      	b.n	8000572 <run_excercise+0xb6>
+ 80004da:	e04a      	b.n	8000572 <run_excercise5+0xb6>
 		  	display7SEG(4 - *count);
  80004dc:	683b      	ldr	r3, [r7, #0]
  80004de:	681b      	ldr	r3, [r3, #0]
@@ -552,7 +552,7 @@ void run_excercise(int *state, int *count) {
  80004f8:	683b      	ldr	r3, [r7, #0]
  80004fa:	681b      	ldr	r3, [r3, #0]
  80004fc:	2b04      	cmp	r3, #4
- 80004fe:	dd3a      	ble.n	8000576 <run_excercise+0xba>
+ 80004fe:	dd3a      	ble.n	8000576 <run_excercise5+0xba>
 		  		*count = 0;
  8000500:	683b      	ldr	r3, [r7, #0]
  8000502:	2200      	movs	r2, #0
@@ -562,7 +562,7 @@ void run_excercise(int *state, int *count) {
  8000508:	2201      	movs	r2, #1
  800050a:	601a      	str	r2, [r3, #0]
 		  	break;
- 800050c:	e033      	b.n	8000576 <run_excercise+0xba>
+ 800050c:	e033      	b.n	8000576 <run_excercise5+0xba>
 		  	display7SEG(1 - *count);
  800050e:	683b      	ldr	r3, [r7, #0]
  8000510:	681b      	ldr	r3, [r3, #0]
@@ -581,7 +581,7 @@ void run_excercise(int *state, int *count) {
  800052a:	683b      	ldr	r3, [r7, #0]
  800052c:	681b      	ldr	r3, [r3, #0]
  800052e:	2b01      	cmp	r3, #1
- 8000530:	dd23      	ble.n	800057a <run_excercise+0xbe>
+ 8000530:	dd23      	ble.n	800057a <run_excercise5+0xbe>
 		  		*count = 0;
  8000532:	683b      	ldr	r3, [r7, #0]
  8000534:	2200      	movs	r2, #0
@@ -591,7 +591,7 @@ void run_excercise(int *state, int *count) {
  800053a:	2202      	movs	r2, #2
  800053c:	601a      	str	r2, [r3, #0]
 		  	break;
- 800053e:	e01c      	b.n	800057a <run_excercise+0xbe>
+ 800053e:	e01c      	b.n	800057a <run_excercise5+0xbe>
 		  	display7SEG(2 - *count);
  8000540:	683b      	ldr	r3, [r7, #0]
  8000542:	681b      	ldr	r3, [r3, #0]
@@ -610,7 +610,7 @@ void run_excercise(int *state, int *count) {
  800055c:	683b      	ldr	r3, [r7, #0]
  800055e:	681b      	ldr	r3, [r3, #0]
  8000560:	2b02      	cmp	r3, #2
- 8000562:	dd0c      	ble.n	800057e <run_excercise+0xc2>
+ 8000562:	dd0c      	ble.n	800057e <run_excercise5+0xc2>
 		  		*count = 0;
  8000564:	683b      	ldr	r3, [r7, #0]
  8000566:	2200      	movs	r2, #0
@@ -620,16 +620,16 @@ void run_excercise(int *state, int *count) {
  800056c:	2200      	movs	r2, #0
  800056e:	601a      	str	r2, [r3, #0]
 		  	break;
- 8000570:	e005      	b.n	800057e <run_excercise+0xc2>
+ 8000570:	e005      	b.n	800057e <run_excercise5+0xc2>
 		  	break;
  8000572:	bf00      	nop
- 8000574:	e004      	b.n	8000580 <run_excercise+0xc4>
+ 8000574:	e004      	b.n	8000580 <run_excercise5+0xc4>
 		  	break;
  8000576:	bf00      	nop
- 8000578:	e002      	b.n	8000580 <run_excercise+0xc4>
+ 8000578:	e002      	b.n	8000580 <run_excercise5+0xc4>
 		  	break;
  800057a:	bf00      	nop
- 800057c:	e000      	b.n	8000580 <run_excercise+0xc4>
+ 800057c:	e000      	b.n	8000580 <run_excercise5+0xc4>
 		  	break;
  800057e:	bf00      	nop
 	}
@@ -674,14 +674,14 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  run_excercise(&state, &count);
+	  run_excercise5(&state, &count);
  8000598:	4904      	ldr	r1, [pc, #16]	; (80005ac <main+0x24>)
  800059a:	4805      	ldr	r0, [pc, #20]	; (80005b0 <main+0x28>)
- 800059c:	f7ff ff8e 	bl	80004bc <run_excercise>
+ 800059c:	f7ff ff8e 	bl	80004bc <run_excercise5>
 	  HAL_Delay(1000);
  80005a0:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
  80005a4:	f000 f986 	bl	80008b4 <HAL_Delay>
-	  run_excercise(&state, &count);
+	  run_excercise5(&state, &count);
  80005a8:	e7f6      	b.n	8000598 <main+0x10>
  80005aa:	bf00      	nop
  80005ac:	2000002c 	.word	0x2000002c
