@@ -95,38 +95,8 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  switch (state) {
-	  	case 0:
-	  		display7SEG(4 - count);
-	  		red_light();
-	  		count++;
-	  		if (count >= 5) {
-	  			count = 0;
-	  			state = 1;
-	  		}
-	  		break;
-	  	case 1:
-	  		display7SEG(1 - count);
-	  		yellow_light();
-	  		count++;
-	  		if (count >= 2) {
-	  			count = 0;
-	  			state = 2;
-	  		}
-	  		break;
-	  	case 2:
-	  		display7SEG(2 - count);
-	  		green_light();
-	  		count++;
-	  		if (count >= 3) {
-	  			count = 0;
-	  			state = 0;
-	  		}
-	  		break;
-	  	default:
-	  		break;
-	  	}
-	HAL_Delay(1000);
+	  run_excercise(&state, &count);
+	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

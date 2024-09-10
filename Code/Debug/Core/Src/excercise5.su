@@ -2,3 +2,4 @@ excercise5.c:9:6:display7SEG	16	static
 excercise5.c:61:6:red_light	8	static
 excercise5.c:76:6:yellow_light	8	static
 excercise5.c:91:6:green_light	8	static
+excercise5.c:106:6:run_excercise	16	static
