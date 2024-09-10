@@ -85,18 +85,18 @@ Disassembly of section .text:
 void red_light() {
  800014c:	b580      	push	{r7, lr}
  800014e:	af00      	add	r7, sp, #0
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
- 8000150:	2201      	movs	r2, #1
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+ 8000150:	2200      	movs	r2, #0
  8000152:	2120      	movs	r1, #32
  8000154:	4807      	ldr	r0, [pc, #28]	; (8000174 <red_light+0x28>)
  8000156:	f000 fc39 	bl	80009cc <HAL_GPIO_WritePin>
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
- 800015a:	2200      	movs	r2, #0
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
+ 800015a:	2201      	movs	r2, #1
  800015c:	2140      	movs	r1, #64	; 0x40
  800015e:	4805      	ldr	r0, [pc, #20]	; (8000174 <red_light+0x28>)
  8000160:	f000 fc34 	bl	80009cc <HAL_GPIO_WritePin>
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
- 8000164:	2200      	movs	r2, #0
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
+ 8000164:	2201      	movs	r2, #1
  8000166:	2180      	movs	r1, #128	; 0x80
  8000168:	4802      	ldr	r0, [pc, #8]	; (8000174 <red_light+0x28>)
  800016a:	f000 fc2f 	bl	80009cc <HAL_GPIO_WritePin>
@@ -111,18 +111,18 @@ void red_light() {
 void yellow_light() {
  8000178:	b580      	push	{r7, lr}
  800017a:	af00      	add	r7, sp, #0
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
- 800017c:	2200      	movs	r2, #0
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+ 800017c:	2201      	movs	r2, #1
  800017e:	2120      	movs	r1, #32
  8000180:	4807      	ldr	r0, [pc, #28]	; (80001a0 <yellow_light+0x28>)
  8000182:	f000 fc23 	bl	80009cc <HAL_GPIO_WritePin>
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
- 8000186:	2201      	movs	r2, #1
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
+ 8000186:	2200      	movs	r2, #0
  8000188:	2140      	movs	r1, #64	; 0x40
  800018a:	4805      	ldr	r0, [pc, #20]	; (80001a0 <yellow_light+0x28>)
  800018c:	f000 fc1e 	bl	80009cc <HAL_GPIO_WritePin>
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
- 8000190:	2200      	movs	r2, #0
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
+ 8000190:	2201      	movs	r2, #1
  8000192:	2180      	movs	r1, #128	; 0x80
  8000194:	4802      	ldr	r0, [pc, #8]	; (80001a0 <yellow_light+0x28>)
  8000196:	f000 fc19 	bl	80009cc <HAL_GPIO_WritePin>
@@ -137,18 +137,18 @@ void yellow_light() {
 void green_light() {
  80001a4:	b580      	push	{r7, lr}
  80001a6:	af00      	add	r7, sp, #0
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
- 80001a8:	2200      	movs	r2, #0
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+ 80001a8:	2201      	movs	r2, #1
  80001aa:	2120      	movs	r1, #32
  80001ac:	4807      	ldr	r0, [pc, #28]	; (80001cc <green_light+0x28>)
  80001ae:	f000 fc0d 	bl	80009cc <HAL_GPIO_WritePin>
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
- 80001b2:	2200      	movs	r2, #0
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
+ 80001b2:	2201      	movs	r2, #1
  80001b4:	2140      	movs	r1, #64	; 0x40
  80001b6:	4805      	ldr	r0, [pc, #20]	; (80001cc <green_light+0x28>)
  80001b8:	f000 fc08 	bl	80009cc <HAL_GPIO_WritePin>
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
- 80001bc:	2201      	movs	r2, #1
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
+ 80001bc:	2200      	movs	r2, #0
  80001be:	2180      	movs	r1, #128	; 0x80
  80001c0:	4802      	ldr	r0, [pc, #8]	; (80001cc <green_light+0x28>)
  80001c2:	f000 fc03 	bl	80009cc <HAL_GPIO_WritePin>
