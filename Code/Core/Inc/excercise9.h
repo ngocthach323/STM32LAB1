@@ -9,6 +9,7 @@
 #define INC_EXCERCISE9_H_
 #include "main.h"
 
+void setFullOnClock();
 void clearNumberOnClock(int num);
 
 #endif /* INC_EXCERCISE9_H_ */
