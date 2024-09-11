@@ -12,6 +12,6 @@
 void red_light();
 void yellow_light();
 void green_light();
-void run_excercise3();
+void run_excercise3(int *state, int *count);
 
 #endif /* INC_EXCERCISE3_H_ */
