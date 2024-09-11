@@ -95,7 +95,7 @@ int main(void)
   {
 	  count = rand() % 12;
 	  setNumberOnClock(count);
-	  HAL_Delay(2000);
+	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
