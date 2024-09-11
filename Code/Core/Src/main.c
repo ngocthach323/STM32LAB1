@@ -96,12 +96,12 @@ int main(void)
 	  if (count < 12) {
 		  displayClock(count);
 		  count++;
-		  HAL_Delay(1000);
 	  }
 	  else {
 		  clearClock();
 		  count = 0;
 	  }
+	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

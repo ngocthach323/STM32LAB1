@@ -2392,17 +2392,17 @@ LOAD e:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_macro   0x000000000001534c      0x1ed ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
  .debug_macro   0x0000000000015539      0x194 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
 
-.debug_line     0x0000000000000000     0x4bd9
+.debug_line     0x0000000000000000     0x4bdb
  .debug_line    0x0000000000000000      0x6a0 ./Core/Src/excercise7.o
- .debug_line    0x00000000000006a0      0x6e3 ./Core/Src/main.o
- .debug_line    0x0000000000000d83      0x635 ./Core/Src/stm32f1xx_hal_msp.o
- .debug_line    0x00000000000013b8      0x6f6 ./Core/Src/stm32f1xx_it.o
- .debug_line    0x0000000000001aae      0x6b2 ./Core/Src/system_stm32f1xx.o
- .debug_line    0x0000000000002160       0x86 ./Core/Startup/startup_stm32f103c6ux.o
- .debug_line    0x00000000000021e6      0x8df ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_line    0x0000000000002ac5      0xac7 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_line    0x000000000000358c      0x962 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_line    0x0000000000003eee      0xceb ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_line    0x00000000000006a0      0x6e5 ./Core/Src/main.o
+ .debug_line    0x0000000000000d85      0x635 ./Core/Src/stm32f1xx_hal_msp.o
+ .debug_line    0x00000000000013ba      0x6f6 ./Core/Src/stm32f1xx_it.o
+ .debug_line    0x0000000000001ab0      0x6b2 ./Core/Src/system_stm32f1xx.o
+ .debug_line    0x0000000000002162       0x86 ./Core/Startup/startup_stm32f103c6ux.o
+ .debug_line    0x00000000000021e8      0x8df ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_line    0x0000000000002ac7      0xac7 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_line    0x000000000000358e      0x962 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_line    0x0000000000003ef0      0xceb ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
 
 .debug_str      0x0000000000000000    0x7982b
  .debug_str     0x0000000000000000    0x786e9 ./Core/Src/excercise7.o

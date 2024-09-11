@@ -37,13 +37,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  000156cd  00000000  00000000  00024948  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00004bd9  00000000  00000000  0003a015  2**0
+ 17 .debug_line   00004bdb  00000000  00000000  0003a015  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0007982b  00000000  00000000  0003ebee  2**0
+ 18 .debug_str    0007982b  00000000  00000000  0003ebf0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000b8419  2**0
+ 19 .comment      00000053  00000000  00000000  000b841b  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000d7c  00000000  00000000  000b846c  2**2
+ 20 .debug_frame  00000d7c  00000000  00000000  000b8470  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -323,7 +323,7 @@ int main(void)
  80002c4:	4b0c      	ldr	r3, [pc, #48]	; (80002f8 <main+0x44>)
  80002c6:	681b      	ldr	r3, [r3, #0]
  80002c8:	2b0b      	cmp	r3, #11
- 80002ca:	dc0e      	bgt.n	80002ea <main+0x36>
+ 80002ca:	dc0a      	bgt.n	80002e2 <main+0x2e>
 		  displayClock(count);
  80002cc:	4b0a      	ldr	r3, [pc, #40]	; (80002f8 <main+0x44>)
  80002ce:	681b      	ldr	r3, [r3, #0]
@@ -335,18 +335,19 @@ int main(void)
  80002da:	3301      	adds	r3, #1
  80002dc:	4a06      	ldr	r2, [pc, #24]	; (80002f8 <main+0x44>)
  80002de:	6013      	str	r3, [r2, #0]
-		  HAL_Delay(1000);
- 80002e0:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
- 80002e4:	f000 f968 	bl	80005b8 <HAL_Delay>
- 80002e8:	e7ec      	b.n	80002c4 <main+0x10>
+ 80002e0:	e004      	b.n	80002ec <main+0x38>
 	  }
 	  else {
 		  clearClock();
- 80002ea:	f7ff ff9d 	bl	8000228 <clearClock>
+ 80002e2:	f7ff ffa1 	bl	8000228 <clearClock>
 		  count = 0;
- 80002ee:	4b02      	ldr	r3, [pc, #8]	; (80002f8 <main+0x44>)
- 80002f0:	2200      	movs	r2, #0
- 80002f2:	601a      	str	r2, [r3, #0]
+ 80002e6:	4b04      	ldr	r3, [pc, #16]	; (80002f8 <main+0x44>)
+ 80002e8:	2200      	movs	r2, #0
+ 80002ea:	601a      	str	r2, [r3, #0]
+	  }
+	  HAL_Delay(1000);
+ 80002ec:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
+ 80002f0:	f000 f962 	bl	80005b8 <HAL_Delay>
 	  if (count < 12) {
  80002f4:	e7e6      	b.n	80002c4 <main+0x10>
  80002f6:	bf00      	nop
