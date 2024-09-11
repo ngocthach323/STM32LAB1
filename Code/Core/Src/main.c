@@ -96,8 +96,8 @@ int main(void)
 	  if (count < 12) {
 		  displayClock(count);
 		  count++;
-		  HAL_Delay(1000);
 	  }
+	  HAL_Delay(1000);
   }
   	  /* USER CODE END WHILE */
 
