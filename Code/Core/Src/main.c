@@ -42,7 +42,9 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+	int hour = 0;
+	int minute = 0;
+	int second = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -64,10 +66,7 @@ static void MX_GPIO_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	int hour = 0;
-	int minute = 0;
-	int second = 0;
-	int count = 0;
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -96,26 +95,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  if (count < 43200) {
-		  hour = (count / 3600) % 12;
-		  minute = ((count % 3600) / 60) / 5;
-		  second = ((count % 3600) % 60) / 5;
-
-		  setNumberOnClock(hour);
-		  setNumberOnClock(minute);
-		  setNumberOnClock(second);
-
-		  HAL_Delay(1000);
-
-		  clearNumberOnClock(hour);
-		  clearNumberOnClock(minute);
-		  clearNumberOnClock(second);
-
-		  count = count + 5;
-	  }
-	  else {
-		  count = 0;
-	  }
+	  displayClock(&hour, &minute, &second);
+	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

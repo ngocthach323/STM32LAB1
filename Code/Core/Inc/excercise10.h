@@ -11,5 +11,6 @@
 
 void setNumberOnClock(int num);
 void clearNumberOnClock(int num);
+void displayClock(int *hour, int *minute, int *second);
 
 #endif /* INC_EXCERCISE10_H_ */

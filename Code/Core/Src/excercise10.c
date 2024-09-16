@@ -89,3 +89,37 @@ void clearNumberOnClock(int num) {
 	}
 }
 
+void displayClock(int *hour, int *minute, int *second) {
+	int hourLed = *hour % 12;
+	int minuteLed = *minute / 5;
+	int secondLed = *second / 5;
+
+	//Tắt LED trước đó
+	if (secondLed == 0) {
+		clearNumberOnClock(11);
+	}
+	else {
+		clearNumberOnClock(hourLed - 1);
+		clearNumberOnClock(minuteLed - 1);
+		clearNumberOnClock(secondLed - 1);
+	}
+
+	//Bật LED hiện tại
+	setNumberOnClock(hourLed);
+	setNumberOnClock(minuteLed);
+	setNumberOnClock(secondLed);
+
+	(*second)++;
+	if (*second >= 60) {
+		*second = 0;
+		(*minute)++;
+		if (*minute >= 60) {
+			*minute = 0;
+			(*hour)++;
+			if (*hour >= 12) {
+				*hour = 0;
+			}
+		}
+	}
+
+}

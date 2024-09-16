@@ -1,2 +1,3 @@
 excercise10.c:9:6:setNumberOnClock	16	static
 excercise10.c:51:6:clearNumberOnClock	16	static
+excercise10.c:92:6:displayClock	40	static
