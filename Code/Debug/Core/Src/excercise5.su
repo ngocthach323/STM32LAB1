@@ -1,5 +1,10 @@
-excercise5.c:9:6:display7SEG	16	static
-excercise5.c:61:6:red_light	8	static
-excercise5.c:76:6:yellow_light	8	static
-excercise5.c:91:6:green_light	8	static
-excercise5.c:106:6:run_excercise5	16	static
+excercise5.c:9:6:display7SEG_1	16	static
+excercise5.c:61:6:display7SEG_2	16	static
+excercise5.c:113:6:red_light_1	8	static
+excercise5.c:122:6:red_light_2	8	static
+excercise5.c:131:6:yellow_light_1	8	static
+excercise5.c:140:6:yellow_light_2	8	static
+excercise5.c:149:6:green_light_1	8	static
+excercise5.c:158:6:green_light_2	8	static
+excercise5.c:166:6:display_1	16	static
+excercise5.c:200:6:display_2	16	static
