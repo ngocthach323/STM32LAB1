@@ -116,7 +116,7 @@ void displayClock(int *hour, int *minute, int *second) {
 		if (*minute >= 60) {
 			*minute = 0;
 			(*hour)++;
-			if (*hour >= 12) {
+			if (*hour >= 24) {
 				*hour = 0;
 			}
 		}
