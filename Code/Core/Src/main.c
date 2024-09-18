@@ -42,9 +42,9 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-	int hour = 0;
-	int minute = 0;
-	int second = 0;
+	int hour = 7;
+	int minute = 59;
+	int second = 45;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

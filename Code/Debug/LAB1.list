@@ -9,41 +9,41 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   2 .rodata       00000024  08001448  08001448  00011448  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  0800146c  0800146c  0002000c  2**0
+  3 .ARM.extab    00000000  0800146c  0800146c  00020018  2**0
                   CONTENTS
-  4 .ARM          00000000  0800146c  0800146c  0002000c  2**0
+  4 .ARM          00000000  0800146c  0800146c  00020018  2**0
                   CONTENTS
-  5 .preinit_array 00000000  0800146c  0800146c  0002000c  2**0
+  5 .preinit_array 00000000  0800146c  0800146c  00020018  2**0
                   CONTENTS, ALLOC, LOAD, DATA
   6 .init_array   00000004  0800146c  0800146c  0001146c  2**2
                   CONTENTS, ALLOC, LOAD, DATA
   7 .fini_array   00000004  08001470  08001470  00011470  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         0000000c  20000000  08001474  00020000  2**2
+  8 .data         00000018  20000000  08001474  00020000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          0000002c  2000000c  08001480  0002000c  2**2
+  9 .bss          00000020  20000018  0800148c  00020018  2**2
                   ALLOC
- 10 ._user_heap_stack 00000600  20000038  08001480  00020038  2**0
+ 10 ._user_heap_stack 00000600  20000038  0800148c  00020038  2**0
                   ALLOC
- 11 .ARM.attributes 00000029  00000000  00000000  0002000c  2**0
+ 11 .ARM.attributes 00000029  00000000  00000000  00020018  2**0
                   CONTENTS, READONLY
- 12 .debug_info   000032cd  00000000  00000000  00020035  2**0
+ 12 .debug_info   000032cd  00000000  00000000  00020041  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00000fc6  00000000  00000000  00023302  2**0
+ 13 .debug_abbrev 00000fc6  00000000  00000000  0002330e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000400  00000000  00000000  000242c8  2**3
+ 14 .debug_aranges 00000400  00000000  00000000  000242d8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000368  00000000  00000000  000246c8  2**3
+ 15 .debug_ranges 00000368  00000000  00000000  000246d8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  000156cd  00000000  00000000  00024a30  2**0
+ 16 .debug_macro  000156cd  00000000  00000000  00024a40  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00004c19  00000000  00000000  0003a0fd  2**0
+ 17 .debug_line   00004c19  00000000  00000000  0003a10d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0007986f  00000000  00000000  0003ed16  2**0
+ 18 .debug_str    0007986f  00000000  00000000  0003ed26  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000b8585  2**0
+ 19 .comment      00000053  00000000  00000000  000b8595  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000da8  00000000  00000000  000b85d8  2**2
+ 20 .debug_frame  00000da8  00000000  00000000  000b85e8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -60,7 +60,7 @@ Disassembly of section .text:
  800011e:	2301      	movs	r3, #1
  8000120:	7023      	strb	r3, [r4, #0]
  8000122:	bd10      	pop	{r4, pc}
- 8000124:	2000000c 	.word	0x2000000c
+ 8000124:	20000018 	.word	0x20000018
  8000128:	00000000 	.word	0x00000000
  800012c:	08001430 	.word	0x08001430
 
@@ -73,7 +73,7 @@ Disassembly of section .text:
  800013a:	f3af 8000 	nop.w
  800013e:	bd08      	pop	{r3, pc}
  8000140:	00000000 	.word	0x00000000
- 8000144:	20000010 	.word	0x20000010
+ 8000144:	2000001c 	.word	0x2000001c
  8000148:	08001430 	.word	0x08001430
 
 0800014c <setNumberOnClock>:
@@ -389,25 +389,25 @@ void displayClock(int *hour, int *minute, int *second) {
 		clearNumberOnClock(11);
  800036e:	200b      	movs	r0, #11
  8000370:	f7ff ff60 	bl	8000234 <clearNumberOnClock>
- 8000374:	e00e      	b.n	8000394 <displayClock+0x78>
+ 8000374:	e004      	b.n	8000380 <displayClock+0x64>
 	}
 	else {
-		clearNumberOnClock(hourLed - 1);
- 8000376:	69fb      	ldr	r3, [r7, #28]
+		clearNumberOnClock(secondLed - 1);
+ 8000376:	697b      	ldr	r3, [r7, #20]
  8000378:	3b01      	subs	r3, #1
  800037a:	4618      	mov	r0, r3
  800037c:	f7ff ff5a 	bl	8000234 <clearNumberOnClock>
-		clearNumberOnClock(minuteLed - 1);
- 8000380:	69bb      	ldr	r3, [r7, #24]
+	}
+	clearNumberOnClock(hourLed - 1);
+ 8000380:	69fb      	ldr	r3, [r7, #28]
  8000382:	3b01      	subs	r3, #1
  8000384:	4618      	mov	r0, r3
  8000386:	f7ff ff55 	bl	8000234 <clearNumberOnClock>
-		clearNumberOnClock(secondLed - 1);
- 800038a:	697b      	ldr	r3, [r7, #20]
+	clearNumberOnClock(minuteLed - 1);
+ 800038a:	69bb      	ldr	r3, [r7, #24]
  800038c:	3b01      	subs	r3, #1
  800038e:	4618      	mov	r0, r3
  8000390:	f7ff ff50 	bl	8000234 <clearNumberOnClock>
-	}
 
 	//Bật LED hiện tại
 	setNumberOnClock(hourLed);
@@ -523,9 +523,9 @@ int main(void)
  800041e:	f000 f965 	bl	80006ec <HAL_Delay>
 	  displayClock(&hour, &minute, &second);
  8000422:	e7f5      	b.n	8000410 <main+0x10>
- 8000424:	20000030 	.word	0x20000030
- 8000428:	2000002c 	.word	0x2000002c
- 800042c:	20000028 	.word	0x20000028
+ 8000424:	20000008 	.word	0x20000008
+ 8000428:	20000004 	.word	0x20000004
+ 800042c:	20000000 	.word	0x20000000
 
 08000430 <SystemClock_Config>:
 /**
@@ -1035,11 +1035,11 @@ LoopFillZerobss:
   ldr r0, =_sdata
  8000610:	20000000 	.word	0x20000000
   ldr r1, =_edata
- 8000614:	2000000c 	.word	0x2000000c
+ 8000614:	20000018 	.word	0x20000018
   ldr r2, =_sidata
  8000618:	08001474 	.word	0x08001474
   ldr r2, =_sbss
- 800061c:	2000000c 	.word	0x2000000c
+ 800061c:	20000018 	.word	0x20000018
   ldr r4, =_ebss
  8000620:	20000038 	.word	0x20000038
 
@@ -1161,9 +1161,9 @@ __weak HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
  80006a2:	3708      	adds	r7, #8
  80006a4:	46bd      	mov	sp, r7
  80006a6:	bd80      	pop	{r7, pc}
- 80006a8:	20000000 	.word	0x20000000
- 80006ac:	20000008 	.word	0x20000008
- 80006b0:	20000004 	.word	0x20000004
+ 80006a8:	2000000c 	.word	0x2000000c
+ 80006ac:	20000014 	.word	0x20000014
+ 80006b0:	20000010 	.word	0x20000010
 
 080006b4 <HAL_IncTick>:
   * @note This function is declared as __weak to be overwritten in case of other
@@ -1188,7 +1188,7 @@ __weak void HAL_IncTick(void)
  80006ca:	46bd      	mov	sp, r7
  80006cc:	bc80      	pop	{r7}
  80006ce:	4770      	bx	lr
- 80006d0:	20000008 	.word	0x20000008
+ 80006d0:	20000014 	.word	0x20000014
  80006d4:	20000034 	.word	0x20000034
 
 080006d8 <HAL_GetTick>:
@@ -1261,7 +1261,7 @@ __weak void HAL_Delay(uint32_t Delay)
  800072a:	46bd      	mov	sp, r7
  800072c:	bd80      	pop	{r7, pc}
  800072e:	bf00      	nop
- 8000730:	20000008 	.word	0x20000008
+ 8000730:	20000014 	.word	0x20000014
 
 08000734 <__NVIC_SetPriorityGrouping>:
            In case of a conflict between priority grouping and available
@@ -3334,8 +3334,8 @@ if (((RCC_ClkInitStruct->ClockType) & RCC_CLOCKTYPE_PCLK1) == RCC_CLOCKTYPE_PCLK
  80012e0:	40022000 	.word	0x40022000
  80012e4:	40021000 	.word	0x40021000
  80012e8:	08001448 	.word	0x08001448
- 80012ec:	20000000 	.word	0x20000000
- 80012f0:	20000004 	.word	0x20000004
+ 80012ec:	2000000c 	.word	0x2000000c
+ 80012f0:	20000010 	.word	0x20000010
 
 080012f4 <HAL_RCC_GetSysClockFreq>:
   *         right SYSCLK value. Otherwise, any configuration based on this function will be incorrect.
@@ -3510,7 +3510,7 @@ static void RCC_Delay(uint32_t mdelay)
  80013ca:	46bd      	mov	sp, r7
  80013cc:	bc80      	pop	{r7}
  80013ce:	4770      	bx	lr
- 80013d0:	20000000 	.word	0x20000000
+ 80013d0:	2000000c 	.word	0x2000000c
  80013d4:	10624dd3 	.word	0x10624dd3
 
 080013d8 <__libc_init_array>:

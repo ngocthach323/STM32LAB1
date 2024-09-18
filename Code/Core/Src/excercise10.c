@@ -99,10 +99,10 @@ void displayClock(int *hour, int *minute, int *second) {
 		clearNumberOnClock(11);
 	}
 	else {
-		clearNumberOnClock(hourLed - 1);
-		clearNumberOnClock(minuteLed - 1);
 		clearNumberOnClock(secondLed - 1);
 	}
+	clearNumberOnClock(hourLed - 1);
+	clearNumberOnClock(minuteLed - 1);
 
 	//Bật LED hiện tại
 	setNumberOnClock(hourLed);
