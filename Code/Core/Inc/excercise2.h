@@ -9,9 +9,12 @@
 #define INC_EXCERCISE2_H_
 #include "main.h"
 
+extern int status;
+extern int count;
+
 void red_light();
 void yellow_light();
 void green_light();
-void run_excercise2(int *state, int *count);
+void run_excercise2(int status, int count);
 
 #endif /* INC_EXCERCISE2_H_ */

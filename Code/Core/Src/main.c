@@ -42,8 +42,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-int state = 0;
-int count = 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -92,10 +91,15 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
     /* USER CODE END WHILE */
-	  run_excercise2(&state, &count);
+	  run_excercise2(status, count);
+	  status++;
+	  if (status == 2) {
+		  status = 0;
+	  }
 	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
