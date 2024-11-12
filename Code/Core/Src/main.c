@@ -42,8 +42,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-int state = 0;
-int count = 0;
+	int state = 0;
+	int count = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
