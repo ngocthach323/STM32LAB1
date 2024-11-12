@@ -6,5 +6,5 @@ excercise5.c:131:6:yellow_light_1	8	static
 excercise5.c:140:6:yellow_light_2	8	static
 excercise5.c:149:6:green_light_1	8	static
 excercise5.c:158:6:green_light_2	8	static
-excercise5.c:166:6:display_1	16	static
-excercise5.c:200:6:display_2	16	static
+excercise5.c:167:6:display_1	16	static
+excercise5.c:199:6:display_2	16	static
