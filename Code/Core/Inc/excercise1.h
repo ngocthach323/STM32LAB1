@@ -9,6 +9,8 @@
 #define INC_EXCERCISE1_H_
 #include "main.h"
 
-void run_excercise1(int *status);
+extern int status;
+
+void run_excercise1(int status);
 
 #endif /* INC_EXCERCISE1_H_ */
