@@ -42,7 +42,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-int count = 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -90,6 +90,7 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Infinite loop */
+  int count = 0;
   while (1)
   {
 	  /* USER CODE BEGIN WHILE */
